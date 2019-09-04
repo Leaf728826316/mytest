@@ -2,4 +2,6 @@
 20190901 my first time use sourcetree.Test push dev!
 20190902 Test my local branch "feature" test to follow the origin develop
 20190902 Test my local branch "feature" test to to push origin develop 02
-20190904 Test branch "feature" test to to push origin develop 03
+
+20190904 Test branch "feature" test to to push origin develop 03 make sure02 and 03
+
