@@ -1,0 +1,53 @@
+-- 水检验报告详情表
+        CREATE TABLE D_WATER   --建表
+                (
+                        ID NUMBER(11) GENERATED ALWAYS AS IDENTITY MINVALUE 1 MAXVALUE 99999999999 INCREMENT BY 1 START WITH 1 PRIMARY KEY,
+                        R_METHOD        VARCHAR2(255),
+                        R_NUMBER        VARCHAR2(50),
+                        R_DEPART        VARCHAR2(20),
+                        R_BEGIN_DATE    DATE,
+                        R_TEST_DATE     DATE,
+                        R_SAMPLE_NUMBER VARCHAR2(50),
+                        R_SAMPLE_NAME   VARCHAR2(50),
+                        R_STATUS        VARCHAR2(50),
+                        R_TESTER        VARCHAR2(50),
+                        R_APPROVER      VARCHAR2(50),
+                        R_AUDIT         VARCHAR2(50),
+                        R_REMARK        VARCHAR2(255),
+
+                        W_PH            VARCHAR2(5),
+                        W_HARDNESS      VARCHAR2(50),
+                        W_ALKALINITY    VARCHAR2(50)
+                        )
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+                        
+                        
+        --注释
+        COMMENT ON TABLE  D_WATER IS '水质检详情表';
+        COMMENT ON COLUMN D_WATER.ID IS '主键';
+        COMMENT ON COLUMN D_WATER.R_METHOD IS '检测方法';
+        COMMENT ON COLUMN D_WATER.R_NUMBER IS '报告编号';
+        COMMENT ON COLUMN D_WATER.R_DEPART IS '送检部门/送检单位';
+        COMMENT ON COLUMN D_WATER.R_BEGIN_DATE IS '送样日期';
+        COMMENT ON COLUMN D_WATER.R_TEST_DATE IS '检测日期';
+        COMMENT ON COLUMN D_WATER.R_SAMPLE_NUMBER IS '试样编号';
+        COMMENT ON COLUMN D_WATER.R_SAMPLE_NAME IS '试样名称/矿石名称/样品名称/物料名称';
+        COMMENT ON COLUMN D_WATER.R_STATUS IS '状态';
+        COMMENT ON COLUMN D_WATER.R_TESTER IS '检测人';
+        COMMENT ON COLUMN D_WATER.R_APPROVER IS '审批人';
+        COMMENT ON COLUMN D_WATER.R_AUDIT IS '批准人';
+        COMMENT ON COLUMN D_WATER.R_REMARK IS '备注';
+        
+        COMMENT ON COLUMN D_WATER.W_PH IS 'PH值';
+        COMMENT ON COLUMN D_WATER.W_HARDNESS IS '硬度';
+        COMMENT ON COLUMN D_WATER.W_ALKALINITY IS '碱度';
